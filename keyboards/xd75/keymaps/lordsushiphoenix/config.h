@@ -20,5 +20,6 @@
 #include "../../config.h"
 
 // place overrides here
+#define RGBLIGHT_SLEEP    //sleep underglow with pc
 
 #endif
