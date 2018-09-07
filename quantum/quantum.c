@@ -42,6 +42,8 @@ extern backlight_config_t backlight_config;
 #include "process_midi.h"
 #endif
 
+#include "velocikey.h"
+
 #ifdef AUDIO_ENABLE
   #ifndef GOODBYE_SONG
     #define GOODBYE_SONG SONG(GOODBYE_SOUND)
@@ -195,6 +197,10 @@ bool process_record_quantum(keyrecord_t *record) {
   /* This gets the keycode from the key pressed */
   keypos_t key = record->event.key;
   uint16_t keycode;
+
+#ifdef VELOCIKEY_ENABLE
+  if (velocikey_enabled()) velocikey_accelerate();
+#endif
 
   #if !defined(NO_ACTION_LAYER) && defined(PREVENT_STUCK_MODIFIERS)
     /* TODO: Use store_or_get_action() or a similar function. */
@@ -516,7 +522,14 @@ bool process_record_quantum(keyrecord_t *record) {
     }
     return false;
   #endif // defined(RGBLIGHT_ENABLE) || defined(RGB_MATRIX_ENABLE)
-    #ifdef PROTOCOL_LUFA
+  #ifdef VELOCIKEY_ENABLE
+    case VLK_TOG:
+      if (record->event.pressed) {
+        velocikey_toggle();
+      }
+      return false;
+  #endif
+  #ifdef PROTOCOL_LUFA
     case OUT_AUTO:
       if (record->event.pressed) {
         set_output(OUTPUT_AUTO);

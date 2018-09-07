@@ -54,6 +54,7 @@
 #include "quantum.h"
 #include <util/atomic.h>
 #include "outputselect.h"
+#include "velocikey.h"
 
 #ifdef NKRO_ENABLE
   #include "keycode_config.h"
@@ -1072,6 +1073,10 @@ int main(void)
 
 #ifdef MIDI_ENABLE
         MIDI_Device_USBTask(&USB_MIDI_Interface);
+#endif
+
+#ifdef VELOCIKEY_ENABLE
+    if (velocikey_enabled()) velocikey_decay_task();    
 #endif
 
 #if defined(RGBLIGHT_ANIMATIONS) & defined(RGBLIGHT_ENABLE)
