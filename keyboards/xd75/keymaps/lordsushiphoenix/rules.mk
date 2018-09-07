@@ -33,6 +33,6 @@ AUDIO_ENABLE = no           # Audio output on port C6
 UNICODE_ENABLE = no         # Unicode
 BLUETOOTH_ENABLE = no       # Enable Bluetooth with the Adafruit EZ-Key HID
 
-#leds do not sleep with pc, need to fix
 RGBLIGHT_ENABLE = yes       # Enable WS2812 RGB underlight.  Do not enable this with audio at the same time.
 SLEEP_LED_ENABLE = no       # Breathing sleep LED during USB suspend
+VELOCIKEY_ENABLE = yes      # Change the speed of some effects according to typing speed
