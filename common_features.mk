@@ -237,13 +237,6 @@ ifeq ($(strip $(HD44780_ENABLE)), yes)
     OPT_DEFS += -DHD44780_ENABLE
 endif
 
-<<<<<<< HEAD
-ifeq ($(strip $(VELOCIKEY_ENABLE)), yes)
-    OPT_DEFS += -DVELOCIKEY_ENABLE
-    SRC += $(QUANTUM_DIR)/velocikey.c
-endif
-
-=======
 ifeq ($(strip $(DYNAMIC_KEYMAP_ENABLE)), yes)
     OPT_DEFS += -DDYNAMIC_KEYMAP_ENABLE
     SRC += $(QUANTUM_DIR)/dynamic_keymap.c
@@ -256,7 +249,6 @@ endif
 
 include $(DRIVER_PATH)/qwiic/qwiic.mk
 
->>>>>>> 929065b1a97eb15a54a65c866d19d45998f775c6
 QUANTUM_SRC:= \
     $(QUANTUM_DIR)/quantum.c \
     $(QUANTUM_DIR)/keymap_common.c \

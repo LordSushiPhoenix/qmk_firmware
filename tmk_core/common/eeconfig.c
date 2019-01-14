@@ -13,30 +13,6 @@ extern uint32_t default_layer_state;
  *
  * FIXME: needs doc
  */
-<<<<<<< HEAD
-void eeconfig_init(void)
-{
-#ifdef STM32F303xC
-    EEPROM_format();
-#endif
-    eeprom_update_word(EECONFIG_MAGIC,          EECONFIG_MAGIC_NUMBER);
-    eeprom_update_byte(EECONFIG_DEBUG,          0);
-    eeprom_update_byte(EECONFIG_DEFAULT_LAYER,  0);
-    eeprom_update_byte(EECONFIG_KEYMAP,         0);
-    eeprom_update_byte(EECONFIG_MOUSEKEY_ACCEL, 0);
-#ifdef BACKLIGHT_ENABLE
-    eeprom_update_byte(EECONFIG_BACKLIGHT,      0);
-#endif
-#ifdef AUDIO_ENABLE
-    eeprom_update_byte(EECONFIG_AUDIO,             0xFF); // On by default
-#endif
-#if defined(RGBLIGHT_ENABLE) || defined(RGB_MATRIX_ENABLE)
-    eeprom_update_dword(EECONFIG_RGBLIGHT,      0);
-    eeprom_update_byte(EECONFIG_VELOCIKEY,       0);
-#endif
-#ifdef STENO_ENABLE
-    eeprom_update_byte(EECONFIG_STENOMODE,      0);
-=======
 __attribute__ ((weak))
 void eeconfig_init_user(void) {
   // Reset user EEPROM value to blank, rather than to a set value
@@ -58,7 +34,6 @@ void eeconfig_init_kb(void) {
 void eeconfig_init_quantum(void) {
 #ifdef STM32_EEPROM_ENABLE
     EEPROM_Erase();
->>>>>>> 929065b1a97eb15a54a65c866d19d45998f775c6
 #endif
   eeprom_update_word(EECONFIG_MAGIC,          EECONFIG_MAGIC_NUMBER);
   eeprom_update_byte(EECONFIG_DEBUG,          0);

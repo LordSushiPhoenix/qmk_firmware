@@ -42,14 +42,10 @@ extern backlight_config_t backlight_config;
 #include "process_midi.h"
 #endif
 
-<<<<<<< HEAD
-#include "velocikey.h"
-=======
 
 #ifdef ENCODER_ENABLE
 #include "encoder.h"
 #endif
->>>>>>> 929065b1a97eb15a54a65c866d19d45998f775c6
 
 #ifdef AUDIO_ENABLE
   #ifndef GOODBYE_SONG
@@ -213,15 +209,7 @@ bool process_record_quantum(keyrecord_t *record) {
   keypos_t key = record->event.key;
   uint16_t keycode;
 
-<<<<<<< HEAD
-#ifdef VELOCIKEY_ENABLE
-  if (velocikey_enabled()) velocikey_accelerate();
-#endif
-
-  #if !defined(NO_ACTION_LAYER) && defined(PREVENT_STUCK_MODIFIERS)
-=======
   #if !defined(NO_ACTION_LAYER) && !defined(STRICT_LAYER_RELEASE)
->>>>>>> 929065b1a97eb15a54a65c866d19d45998f775c6
     /* TODO: Use store_or_get_action() or a similar function. */
     if (!disable_action_cache) {
       uint8_t layer;
