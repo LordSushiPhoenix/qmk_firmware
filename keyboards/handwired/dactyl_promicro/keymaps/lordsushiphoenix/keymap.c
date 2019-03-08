@@ -9,6 +9,7 @@ extern keymap_config_t keymap_config;
 #define _FN 1
 #define _NV 2
 #define _SM 3
+#define _GM 4
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -54,5 +55,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
                                                              
   ),
+//START OF A GAME LAYOUT TO SHIFT WASD TO A MORE COMFORTABLE POSITION
+//  [_GM] = LAYOUT_6x6(
+//     _______, _______, KC_1   , KC_2   , _______, _______, _______, _______, _______, _______, _______, _______,  
+//     _______, KC_PLUS, KC_Q   , KC_W   , KC_RABK, _______, KC_UNDS, KC_DLR , KC_QUES, _______, KC_PERC, _______, 
+//     _______, KC_AT  , KC_A   , KC_S   , KC_RPRN, _______, KC_BSLS, KC_PIPE, KC_QUOT, _______, KC_TILD, _______,
+//     _______, KC_HASH, KC_EQL , KC_S   , KC_RCBR, _______, KC_MINS, KC_GRV , KC_DQT , _______, KC_CIRC, _______, 
+//     _______, _______, _______, KC_D   , KC_RBRC,                   _______, _______, _______, _______, _______,
+//     _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
+                                                             
+//  ),
 
   };
