@@ -28,9 +28,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * | Lctl | lGUI | lalt | down | del  |                                  | left | Down |  up  | right|  fn  |
  * `----------------------------------'                                  `----------------------------------'
  *                                      ,-------------.  ,-------------.
- *                                      | Lgui | esc  |  | pscr | lgui |
+ *                                      | Lalt | esc  |  | pscr | lalt |
  *                               ,------|------|------|  |------+------+------.
- *                               |      |      | lctl |  | rctl |      |      |
+ *                               |      |      | lgui |  | rgui |      |      |
  *                               | tab  | spce |------|  |------| bspc | ENT  |
  *                               |      |      | Lsft |  | Rsft |      |      |
  *                               `--------------------'  `--------------------'
@@ -41,21 +41,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      LT(_FN, KC_CAPS), KC_A  ,  KC_S  ,  KC_D  ,  KC_F  , KC_G  ,      KC_H  ,  KC_J   , LT(_NV, KC_K), LT(_SM, KC_L), KC_SCLN, KC_QUOT,
      KC_LSFT,          KC_Z  ,  KC_X  ,  KC_C  ,  KC_V  , KC_B  ,      KC_N  ,  KC_M   , KC_COMM,       KC_DOT ,       KC_SLSH, KC_BSLASH,
      KC_LCTL,          KC_LGUI, KC_LALT, KC_DOWN, KC_DEL,                       KC_LEFT, KC_DOWN,       KC_UP,         KC_RIGHT,MO(_FN),
-                                                 KC_LGUI, KC_ESC,      KC_PSCR, KC_LGUI, 
-                                         KC_TAB, KC_SPC, KC_LCTL,      KC_RCTL, KC_BSPC, KC_ENT,
+                                                 KC_LALT, KC_ESC,      KC_PSCR, KC_LALT, 
+                                         KC_TAB, KC_SPC, KC_LGUI,      KC_RGUI, KC_BSPC, KC_ENT,
                                                          KC_LSFT,      KC_RSFT
                                                              
   ),
 
 
   [_FN] = LAYOUT_6x6(
-     KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,      KC_F7,   KC_F8,   KC_F9,   KC_F10,   KC_F11,  KC_F12, 
-     KC_GRV , _______, _______, _______, _______, _______,    _______, _______, _______, KC_PSCR,  _______, _______, 
-     _______, RESET  , _______, _______, _______, _______,    KC_LEFT, KC_DOWN, KC_UP  , KC_RIGHT, _______, _______,
-     _______, _______, _______, _______, _______, _______,    _______, _______, KC_MUTE, KC_MPLY,  _______, _______, 
-     _______, _______, _______, _______, _______,                      KC_MPRV, KC_VOLD, KC_VOLU,  KC_MNXT, _______,
-                                         _______, _______,    _______, _______, 
-                                _______, _______, _______,    _______, _______, _______,
+     KC_F1,   KC_F2,   KC_F3,   KC_F4,    KC_F5,   KC_F6,      KC_F7,   KC_F8,   KC_F9,   KC_F10,   KC_F11,  KC_F12, 
+     KC_GRV , RESET,   KC_UP,   _______,  _______, _______,    _______, _______, _______, KC_PSCR,  _______, _______, 
+     _______, KC_LEFT, KC_DOWN, KC_RIGHT, _______, _______,    KC_LEFT, KC_DOWN, KC_UP  , KC_RIGHT, _______, _______,
+     _______, _______, _______, _______,  _______, _______,    _______, _______, KC_MUTE, KC_MPLY,  _______, _______, 
+     _______, _______, _______, _______,  _______,                      KC_MPRV, KC_VOLD, KC_VOLU,  KC_MNXT, _______,
+                                          _______, _______,    _______, _______, 
+                                 _______, _______, _______,    _______, _______, _______,
                                                   _______,    _______
                                                              
   ),
@@ -77,7 +77,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,  
      _______, KC_PLUS, KC_EXLM, KC_LABK, KC_RABK, _______, KC_UNDS, KC_DLR , KC_QUES, _______, KC_PERC, _______, 
      _______, KC_AT  , KC_AMPR, KC_LPRN, KC_RPRN, _______, KC_BSLS, KC_PIPE, KC_QUOT, _______, KC_TILD, _______,
-     _______, KC_HASH, KC_EQL , KC_LCBR, KC_RCBR, _______, KC_MINS, KC_GRV , KC_DQT , _______, KC_CIRC, _______, 
+     _______, KC_HASH, KC_EQL , KC_LCBR, KC_RCBR, KC_SLSH, KC_MINS, KC_GRV , KC_DQT , _______, KC_CIRC, _______, 
      _______, _______, _______, KC_LBRC, KC_RBRC,                   _______, _______, _______, _______, _______,
                                          _______, _______, _______, _______, 
                                 _______, _______, _______, _______, _______, _______, 
