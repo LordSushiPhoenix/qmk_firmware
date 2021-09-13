@@ -93,7 +93,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * .--------------------------------------------------------------------------------------------------------------------------------------.
  * |        |        |        |        |        |        |        |        |        |        |        |        |        |        |        |
  * |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
- * |        | \      | !      | <      | >      |        |        |        |        | _      | $      | ?      |        | %      |        |
+ * |        | +      | !      | <      | >      |        |        |        |        | _      | $      | ?      |        | %      |        |
  * |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
  * |        | @      | &      | (      | )      |        |        |        |        | \      | |      | '      |        | ~      |        |
  * |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
@@ -104,11 +104,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 
  [_SM] = { /* SYMBOLS */
-  { KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS},
-  { KC_TRNS, KC_BSLS, KC_EXLM, KC_LABK, KC_RABK, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_UNDS, KC_DLR,  KC_QUES, KC_TRNS, KC_PERC, KC_TRNS},
-  { KC_TRNS, KC_AT,   KC_AMPR, KC_LPRN, KC_RPRN, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_BSLS, KC_PIPE, KC_QUOT, KC_TRNS, KC_TILD, KC_TRNS},
-  { KC_TRNS, KC_HASH, KC_EQL, KC_LCBR, KC_RCBR, KC_SLSH, KC_TRNS, KC_TRNS, KC_TRNS, KC_MINS, KC_GRV,  KC_DQT,  KC_TRNS, KC_CIRC, KC_TRNS},
-  { KC_TRNS, KC_TRNS, KC_TRNS, KC_LBRC, KC_RBRC, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS},
+  { _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______},
+  { _______, KC_PLUS, KC_EXLM, KC_LABK, KC_RABK, _______, _______, _______, _______, KC_UNDS, KC_DLR,  KC_QUES, _______, KC_PERC, _______},
+  { _______, KC_AT,   KC_AMPR, KC_LPRN, KC_RPRN, _______, _______, _______, _______, KC_BSLS, KC_PIPE, KC_QUOT, _______, KC_TILD, _______},
+  { _______, KC_HASH, KC_EQL,  KC_LCBR, KC_RCBR, KC_SLSH, _______, _______, _______, KC_MINS, KC_GRV,  KC_DQT,  _______, KC_CIRC, _______},
+  { _______, _______, _______, KC_LBRC, KC_RBRC, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______},
  }
 
 };
